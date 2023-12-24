@@ -14,7 +14,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.gkdd.R;
 import com.example.gkdd.SelectImage;
-import com.example.gkdd.chonmenu;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,7 +58,7 @@ public class nhaphanghoa extends AppCompatActivity {
         txt_tenhang = findViewById(R.id.edit_tenhang);
         SpinnerLoaihanghoa = findViewById(R.id.spinnerLoaiHangHoa);
         txt_gia = findViewById(R.id.edit_gia);
-        txt_dungtich = findViewById(R.id.edit_dungtich);
+        txt_dungtich = findViewById(R.id.edit_size);
         tv_path = findViewById(R.id.tvPath);
         btn_browse = findViewById(R.id.btnbrowse);
         btn_luu = findViewById(R.id.btnLuu);
@@ -111,7 +110,7 @@ public class nhaphanghoa extends AppCompatActivity {
             chon.setLoaiHangHoa(selectedLoaiHangHoa);
         }
         chon.setGia(Double.parseDouble(txt_gia.getText().toString()));
-        chon.setDungtich(Double.parseDouble(txt_dungtich.getText().toString()));
+        chon.setSize(Double.parseDouble(txt_dungtich.getText().toString()));
         if(path.equals("vui lòng chọn một hình ảnh"))
             chon.setHinhanh("");
         else
@@ -131,7 +130,7 @@ public class nhaphanghoa extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent intent = new Intent(nhaphanghoa.this, chonmenu.class);
+        Intent intent = new Intent(nhaphanghoa.this, hienthihanghoa.class);
         startActivity(intent);
     }
     @Override
@@ -156,7 +155,7 @@ public class nhaphanghoa extends AppCompatActivity {
                 txt_mahang.setText(chon.getMaHang());
                 txt_tenhang.setText(chon.getTenHang());
                 txt_gia.setText(chon.getGia() + "");
-                txt_dungtich.setText(chon.getDungtich() + "");
+                txt_dungtich.setText(chon.getSize() + "");
                 tv_path.setText(chon.getHinhanh());
             }
         }

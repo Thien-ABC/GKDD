@@ -1,14 +1,34 @@
 package model;
 
+import androidx.annotation.NonNull;
+
 import java.io.Serializable;
 
 public class HangHoa implements Serializable {
     private String maHang,tenHang;
     private String Tenloai;
     private String hinhanh;
-    private   double gia,dungtich;
+    private   double gia,size;
 
     public HangHoa() {
+    }
+
+    public HangHoa(String tenHang, String tenloai, String hinhanh, double gia, double size) {
+        this.tenHang = tenHang;
+        this.Tenloai = tenloai;
+        this.hinhanh = hinhanh;
+        this.gia = gia;
+        this.size = size;
+
+    }
+
+    public HangHoa(String maHang, String tenHang, String tenloai, String hinhanh, double gia, double size) {
+        this.maHang = maHang;
+        this.tenHang = tenHang;
+        this.Tenloai = tenloai;
+        this.hinhanh = hinhanh;
+        this.gia = gia;
+        this.size = size;
     }
 
     public String getMaHang() {
@@ -31,9 +51,9 @@ public class HangHoa implements Serializable {
         return Tenloai;
     }
 
-    public void setLoaiHangHoa(String tenLoai) {
-        this.Tenloai = tenLoai;
-    }
+//    public void setTenloai(String tenloai) {
+//        Tenloai = tenloai;
+//    }
 
     public String getHinhanh() {
         return hinhanh;
@@ -51,20 +71,16 @@ public class HangHoa implements Serializable {
         this.gia = gia;
     }
 
-    public double getDungtich() {
-        return dungtich;
+    public double getSize() {
+        return size;
     }
 
-    public void setDungtich(double dungtich) {
-        this.dungtich = dungtich;
+    public void setSize(double size) {
+        this.size = size;
     }
 
-    public HangHoa(String maHang, String tenHang, String Tenloai, String hinhanh, double gia, double dungtich) {
-        this.maHang = maHang;
-        this.tenHang = tenHang;
-        this.Tenloai = Tenloai;
-        this.hinhanh = hinhanh;
-        this.gia = gia;
-        this.dungtich = dungtich;
+
+    public void setLoaiHangHoa(String tenLoai) {
+        this.Tenloai = tenLoai;
     }
 }

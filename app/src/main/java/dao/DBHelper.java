@@ -28,7 +28,7 @@ public class DBHelper extends SQLiteOpenHelper {
         public static final String COLUMN_Phanloai = "PHANLOAI";
         public static final String COLUMN_hinhanh = "HINHANH";
         public static final String COLUMN_Gia = "GIA";
-        public static final String COLUMN_Dungtich = "DUNGTICH";
+        public static final String COLUMN_SIZE = "DUNGTICH";
     }
 
 
@@ -38,7 +38,7 @@ public class DBHelper extends SQLiteOpenHelper {
             TABLE.COLUMN_Phanloai + " VARCHAR(50), " +
             TABLE.COLUMN_hinhanh + " TEXT, " +
             TABLE.COLUMN_Gia + " REAL, " +
-            TABLE.COLUMN_Dungtich + " REAL)";
+            TABLE.COLUMN_SIZE + " REAL)";
 
 
 
@@ -67,7 +67,7 @@ public class DBHelper extends SQLiteOpenHelper {
             values.put(TABLE.COLUMN_hinhanh, hh.getHinhanh()); // Nếu getHinhanh trả về đường dẫn hình ảnh
         }
         values.put(TABLE.COLUMN_Gia, hh.getGia());
-        values.put(TABLE.COLUMN_Dungtich, hh.getDungtich());
+        values.put(TABLE.COLUMN_SIZE, hh.getSize());
 
         // Thực hiện lệnh SQL chèn dữ liệu vào cơ sở dữ liệu
         long newRow = db.insert(TABLE.TABLE_NAME, null, values);
@@ -90,7 +90,7 @@ public class DBHelper extends SQLiteOpenHelper {
                     TABLE.COLUMN_Phanloai,
                     TABLE.COLUMN_hinhanh,
                     TABLE.COLUMN_Gia,
-                    TABLE.COLUMN_Dungtich
+                    TABLE.COLUMN_SIZE
             };
             Cursor cursor = getReadableDatabase().query(
                     TABLE.TABLE_NAME,
@@ -112,7 +112,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 hangHoa.setHinhanh(cursor.getString(cursor.getColumnIndexOrThrow(TABLE.COLUMN_hinhanh)));
 
                 hangHoa.setGia(cursor.getDouble(cursor.getColumnIndexOrThrow(TABLE.COLUMN_Gia)));
-                hangHoa.setDungtich(cursor.getDouble(cursor.getColumnIndexOrThrow(TABLE.COLUMN_Dungtich)));
+                hangHoa.setSize(cursor.getDouble(cursor.getColumnIndexOrThrow(TABLE.COLUMN_SIZE)));
 
                 listHangHoa.add(hangHoa);
             }
@@ -163,7 +163,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
         values.put(TABLE.COLUMN_hinhanh, hh.getHinhanh());
         values.put(TABLE.COLUMN_Gia, hh.getGia());
-        values.put(TABLE.COLUMN_Dungtich, hh.getDungtich());
+        values.put(TABLE.COLUMN_SIZE, hh.getSize());
 
         String selection = TABLE.COLUMN_M + " = ?";
         String[] selectionArgs = {hh.getMaHang()};

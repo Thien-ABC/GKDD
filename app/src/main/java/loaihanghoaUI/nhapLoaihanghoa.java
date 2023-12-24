@@ -20,6 +20,7 @@ public class nhapLoaihanghoa extends AppCompatActivity {
     Button btnluu;
 
     int requestcode=113;
+
     LoaiHangHoa lhh;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,7 @@ public class nhapLoaihanghoa extends AppCompatActivity {
         maloai=findViewById(R.id.edit_maloai);
         tenloai=findViewById(R.id.edit_tenloai);
         btnluu=findViewById(R.id.btnLuuLoaihh);
+
     }
     private  void xulyluu(){
         String ma=maloai.getText().toString();

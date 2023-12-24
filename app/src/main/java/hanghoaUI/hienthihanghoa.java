@@ -7,6 +7,7 @@ import android.view.ContextMenu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
@@ -16,7 +17,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.gkdd.MainActivity;
 import com.example.gkdd.R;
-import com.example.gkdd.chonmenu;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -25,6 +25,8 @@ import java.util.List;
 import adapter.AdapterHanghoa;
 import dao.DBHelper;
 import dao.DBHelperlhh;
+import loaihanghoaUI.hienthiloaihanghoa;
+import loaihanghoaUI.nhapLoaihanghoa;
 import model.HangHoa;
 
 
@@ -38,6 +40,7 @@ public class hienthihanghoa extends AppCompatActivity {
     DBHelperlhh helplhh;
     List<HangHoa> listHanghoa=new ArrayList<>();
     HangHoa chon;
+    Button btnLoai;
     int requestUpdate=114,resultcode=115;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,17 +63,24 @@ public class hienthihanghoa extends AppCompatActivity {
             public void onClick(View view) {
                /* Intent intent=new Intent(hienthihanghoa.this, nhaphanghoa.class);
                 startActivityForResult(intent,requestcode);*/
-                Intent intent=new Intent(hienthihanghoa.this, chonmenu.class);
+                Intent intent=new Intent(hienthihanghoa.this, nhaphanghoa.class);
                startActivityForResult(intent,REQUEST_CODE_ACTIVITY2);
             }
         });
-
+        btnLoai.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(hienthihanghoa.this, hienthiloaihanghoa.class);
+                startActivityForResult(intent,REQUEST_CODE_ACTIVITY2);
+            }
+        });
     }
 
     private void addControls() {
         fa=findViewById(R.id.faThem);
         listView = findViewById(R.id.lvQlhh);
         registerForContextMenu(listView);
+        btnLoai = findViewById(R.id.title2);
 
     }
     @Override

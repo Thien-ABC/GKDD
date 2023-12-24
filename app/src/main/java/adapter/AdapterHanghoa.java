@@ -44,16 +44,17 @@
 
             TextView tenhang = item.findViewById(R.id.tvTenhang);
             TextView phanloai = item.findViewById(R.id.tvPhanloai);
-            TextView gia = item.findViewById(R.id.tvgia);
-            TextView dungtich = item.findViewById(R.id.tvDungtich);
+/*            TextView gia = item.findViewById(R.id.tvgia);
+            TextView size = item.findViewById(R.id.tvSize);*/
             ImageView imageView = item.findViewById(R.id.imagehanghoa);
             final HangHoa hh = obj.get(position);
             mahang.setText(hh.getMaHang());
+
             tenhang.setText(hh.getTenHang());
             phanloai.setText(hh.getTenloai());
 
-            gia.setText(hh.getGia() + "");
-            dungtich.setText(hh.getDungtich() + "");
+//            gia.setText(hh.getGia() + "");
+//            size.setText(hh.getSize() + "");
             if (!hh.getHinhanh().equals("")) {
                 Uri imageUri = Uri.parse(hh.getHinhanh());
                 if(imageUri!=null) {

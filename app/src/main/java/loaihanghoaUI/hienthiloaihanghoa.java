@@ -7,6 +7,7 @@ import android.view.ContextMenu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
@@ -35,6 +36,7 @@ public class hienthiloaihanghoa extends AppCompatActivity {
     DBHelperlhh helper;
     List<LoaiHangHoa> listloaiHanghoa=new ArrayList<>();
     LoaiHangHoa chon;
+    Button btnHangHoa;
     int requestcode=113,resultcode=115;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +45,8 @@ public class hienthiloaihanghoa extends AppCompatActivity {
         addControl();
         addEvent();
         helper=new DBHelperlhh(hienthiloaihanghoa.this);
-        //helper.QueryData(DBHelper.Drop_table);
-        //helper.QueryData(DBHelper.SQL_Create_Table);
+     //   helper.QueryData(DBHelper.Drop_table);
+     //   helper.QueryData(DBHelper.SQL_Create_Table);
 
         hienthiloaiHanghoa();
         chon=null;
@@ -68,12 +70,20 @@ public class hienthiloaihanghoa extends AppCompatActivity {
                 startActivityForResult(intent,requestcode);
             }
         });
+        btnHangHoa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(hienthiloaihanghoa.this, hienthihanghoa.class);
+                startActivityForResult(intent,requestcode);
+            }
+        });
     }
 
     private void addControl() {
         fa=findViewById(R.id.faThemloai);
         listView = findViewById(R.id.lvQlloaihh);
         registerForContextMenu(listView);
+        btnHangHoa = findViewById(R.id.title);
     }
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);

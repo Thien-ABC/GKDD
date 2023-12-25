@@ -5,21 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#99CFCA"
     tools:context="loaihanghoaUI.nhapLoaihanghoa">
 
     <EditText
-        android:hint="mã loại"
+        android:hint=""
+        android:editable="false"
+        android:textSize="13pt"
+        android:textColor="@color/black"
         android:id="@+id/edit_maloai"
         android:layout_width="match_parent"
         android:layout_height="60dp"/>
     <EditText
         android:hint="tên loại"
+        android:textColor="@color/black"
+        android:textSize="13pt"
         android:id="@+id/edit_tenloai"
         android:layout_width="match_parent"
         android:layout_height="60dp"/>
     <Button
+        android:layout_marginTop="10pt"
         android:id="@+id/btnLuuLoaihh"
-        android:backgroundTint="@color/black"
+        android:textSize="13pt"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/new1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Lưu"/>

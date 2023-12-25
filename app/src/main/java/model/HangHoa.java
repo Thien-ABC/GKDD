@@ -5,7 +5,8 @@ import androidx.annotation.NonNull;
 import java.io.Serializable;
 
 public class HangHoa implements Serializable {
-    private String maHang,tenHang;
+    private String maHang;
+    private String tenHang;
     private String Tenloai;
     private String hinhanh;
     private   double gia,size;

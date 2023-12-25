@@ -111,7 +111,7 @@ public class hienthihanghoa extends AppCompatActivity {
     private  void capnhathanghoa(Intent intent)
     {
         if (intent.hasExtra("trahh")) {
-            if (helper.isManvExists(chon.getMaHang())) {
+            if (helper.isManvExists(String.valueOf(chon.getMaHang()))) {
                 helper.updateHanghoa(chon);
                 hienthiHanghoa();
             }
@@ -122,7 +122,7 @@ public class hienthihanghoa extends AppCompatActivity {
             super.onActivityResult(requestCode, resultCode, data);
             if(requestCode==this.resultcode) {
                 chon=(HangHoa) data.getSerializableExtra("trahh");
-                if(helper.isManvExists(chon.getMaHang()))
+                if(helper.isManvExists(String.valueOf(chon.getMaHang())))
                 {
                     capnhathanghoa(data);
                 }

@@ -4,34 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#99CFCA"
     tools:context="loaihanghoaUI.hienthiloaihanghoa">
 
     <Button
         android:id="@+id/title"
-        android:background="#252520"
+        android:backgroundTint="@color/new1"
         android:text="Quản lý loại hàng hóa"
         android:textSize="30dp"
-        android:textColor="@color/white"
+        android:textColor="#2F057A"
         android:gravity="center"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="0pt"
         android:layout_height="wrap_content"/>
-        <ListView
-            android:id="@+id/lvQlloaihh"
-            app:layout_constraintTop_toBottomOf="@id/title"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="0pt"
-            android:layout_height="wrap_content"/>
+    <ListView
+        android:id="@+id/lvQlloaihh"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0pt"
+        android:layout_height="wrap_content"/>
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/faThemloai"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#99AA96"
+        android:backgroundTint="#F87CA6"
         android:src="@drawable/add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

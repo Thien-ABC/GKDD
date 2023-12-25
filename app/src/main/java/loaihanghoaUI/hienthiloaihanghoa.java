@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -37,6 +38,7 @@ public class hienthiloaihanghoa extends AppCompatActivity {
     List<LoaiHangHoa> listloaiHanghoa=new ArrayList<>();
     LoaiHangHoa chon;
     Button btnHangHoa;
+
     int requestcode=113,resultcode=115;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +68,7 @@ public class hienthiloaihanghoa extends AppCompatActivity {
         fa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent=new Intent(hienthiloaihanghoa.this, nhapLoaihanghoa.class);
                 startActivityForResult(intent,requestcode);
             }
@@ -84,6 +87,7 @@ public class hienthiloaihanghoa extends AppCompatActivity {
         listView = findViewById(R.id.lvQlloaihh);
         registerForContextMenu(listView);
         btnHangHoa = findViewById(R.id.title);
+
     }
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);

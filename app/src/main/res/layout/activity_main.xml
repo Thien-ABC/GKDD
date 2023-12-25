@@ -1,40 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:gravity="center"
-    >
+    android:background="#8DEFE5"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/dangnhap"
+        android:textColor="#0F1510"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
 
+        android:text="Đăng nhập"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="24pt"
+        android:background="#0025EC"
+       />
+    <TextView
+        android:id="@+id/tendangnhap"
+        android:layout_width="0pt"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="Tài khoản: "
+        android:textSize="10pt"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/editUsername"
+        app:layout_constraintBottom_toBottomOf="@id/editUsername"
+        />
     <EditText
         android:id="@+id/editUsername"
-        android:layout_width="match_parent"
+        android:layout_width="0pt"
         android:layout_height="wrap_content"
         android:hint="Username"
         android:text="Admin"
         android:inputType="text"
+        android:textSize="10pt"
+        android:layout_marginBottom="150pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tendangnhap"
+        app:layout_constraintEnd_toEndOf="parent"
         android:backgroundTint="@android:color/background_dark"
         android:padding="10dp"
         />
-
+    <TextView
+        android:id="@+id/matkhau"
+        android:layout_width="0pt"
+        android:layout_height="wrap_content"
+        android:text="Mật khẩu: "
+        android:textColor="#000000"
+        android:textSize="10pt"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/editPass"
+        app:layout_constraintBottom_toBottomOf="@id/editPass"
+        />
     <EditText
         android:id="@+id/editPass"
-        android:layout_width="match_parent"
+        android:layout_width="0pt"
         android:layout_height="wrap_content"
         android:hint="Password"
         android:text="123456"
+        android:textSize="10pt"
         android:inputType="textPassword"
+        app:layout_constraintStart_toEndOf="@id/matkhau"
+        app:layout_constraintTop_toBottomOf="@id/editUsername"
+        app:layout_constraintEnd_toEndOf="parent"
         android:backgroundTint="@android:color/background_dark"
         android:padding="10dp"
         />
 
     <Button
         android:id="@+id/btnLogin"
+        android:textColor="@color/black"
+        android:textSize="10pt"
+        app:layout_constraintTop_toBottomOf="@id/editPass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="#3AB83F"
         android:text="Login"/>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

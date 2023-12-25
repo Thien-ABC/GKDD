@@ -25,17 +25,23 @@
         android:orientation="vertical">
         <TextView
             android:text="mã: "
+            android:fontFamily="sans-serif-medium"
             android:textSize="8pt"
+            android:textColor="#000000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <TextView
             android:text="tên: "
             android:textSize="8pt"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#000000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <TextView
             android:text="loại: "
             android:textSize="8pt"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#000000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -49,19 +55,20 @@
         <TextView
             android:id="@+id/tvmahang"
             android:textSize="8pt"
+            android:fontFamily="sans-serif-medium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/tvTenhang"
             android:textSize="8pt"
+            android:fontFamily="sans-serif-medium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/tvPhanloai"
+            android:fontFamily="sans-serif-medium"
             android:textSize="8pt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
-
-
 </LinearLayout>
